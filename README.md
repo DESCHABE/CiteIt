@@ -1,4 +1,4 @@
 CiteIt!
 ======
 
-Android application to organize ones favorite citations.
+Android application to organize favorite citations.
