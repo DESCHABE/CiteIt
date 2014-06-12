@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:citeit="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_menu_search"
+        android:title="@string/searchMyCites"
+        citeit:actionViewClass="android.support.v7.widget.SearchView"
+        citeit:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_search_online"
+        android:icon="@drawable/ic_menu_add"
+        android:title="@string/add"
+        citeit:showAsAction="ifRoom" />
+
+</menu>

@@ -8,6 +8,8 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -15,7 +17,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.citeit.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:logo="@drawable/ic_launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,6 +29,10 @@
         <activity
             android:name="com.example.citeit.SearchActivity"
             android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name="com.example.citeit.Main2Activity"
+            android:label="@string/title_activity_main2" >
         </activity>
     </application>
 

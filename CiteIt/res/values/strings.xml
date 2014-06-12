@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CiteIt</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">CiteIt!</string>
     <string name="action_settings">Settings</string>
+    <string name="txtDescription">Suche und verwalte deine Lieblingszitate.</string>
+    <string name="btnMyCites_text">Meine Zitate</string>
+    <string name="btnSearchOnline_text">Zitate online suchen</string>
+    <string name="lstAuthorImage">Bild des Autors</string>
+    <string name="noResults">Du hast noch keine Zitate gespeichert</string>
+    <string name="searchMyCites">Durchsuche meine Zitate</string>
     <string name="add">Hinzufügen</string>
     <string name="delete">Löschen</string>
-    <string name="myCites">Meine Zitate</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="large_text">Large Text</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

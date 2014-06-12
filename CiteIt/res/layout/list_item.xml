@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF">
+    
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:src="@drawable/no_image"
+        android:contentDescription="@string/lstAuthorImage"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dip">
+    </ImageView>
+ 
+	<!-- Zitat -->
+    <TextView
+        android:id="@+id/citation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/icon"
+        android:layout_toRightOf="@+id/icon"
+        android:text="Alea iacta est"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dip"
+        android:layout_marginRight="10dip"
+        android:ellipsize="end"
+        android:singleLine="true" />
+    
+    <!-- Author -->
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/citation"
+        android:textColor="#343434"
+        android:textSize="10dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/icon"
+        android:text="Julius Cäsar"
+        android:layout_marginRight="10dip"
+        android:ellipsize="middle"
+        android:singleLine="true" />
+    
+
+</RelativeLayout>

@@ -2,22 +2,19 @@ package com.example.citeit;
 
 import java.util.Vector;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import com.example.citeit.R;
+
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Build;
 
-public class SearchActivity extends ActionBarActivity implements OnClickListener{
+public class SearchActivity extends Activity implements OnClickListener{
 	
 	protected TextView _editText1 = null;
 	protected TextView _editText2 = null;
@@ -64,7 +61,7 @@ public class SearchActivity extends ActionBarActivity implements OnClickListener
 				//zitateVector = FreebaseSearchForZitat.sucheZitat(_editText1.getText().toString());
 				zitateVector = FreebaseSearchForZitat.sucheZitat("art");
 				
-				//hier die Liste füllen
+				//hier die Liste fï¿½llen
 				/*
 				for (ZitatTopicWrapper zitat : zitateVector) {
 					System.out.println( zitat.toString() + "\n" );
@@ -82,7 +79,7 @@ public class SearchActivity extends ActionBarActivity implements OnClickListener
 
 				System.out.println("hallo1:" + zitateVector.firstElement());
 				System.out.println("hallo2:" + zitateVector.firstElement().toString());
-				System.out.println("hallo3:" + zitateVector.firstElement()._zitatText.toString());
+				//System.out.println("hallo3:" + zitateVector.firstElement()._zitatText.toString());
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
@@ -91,7 +88,7 @@ public class SearchActivity extends ActionBarActivity implements OnClickListener
 			}	
 			
 			Toast toast = 
-					Toast.makeText(this, "#yolomäßig swaggt hier der Text rein", Toast.LENGTH_LONG);
+					Toast.makeText(this, "#yolomï¿½ï¿½ig swaggt hier der Text rein", Toast.LENGTH_LONG);
 			toast.show();
 		}
 		

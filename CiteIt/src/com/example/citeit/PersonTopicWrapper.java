@@ -1,5 +1,6 @@
 package com.example.citeit;
 
+
 /**
  * Ein Objekt dieser Klasse repr�sentiert ein Topic
  * vom Type "/people/person" oder des Sub-Typs "/people/deceased_person".
