@@ -2,6 +2,8 @@ package com.example.citeit;
 
 import java.util.Vector;
 
+import com.example.citeit.R;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -77,7 +79,7 @@ public class SearchActivity extends Activity implements OnClickListener{
 
 				System.out.println("hallo1:" + zitateVector.firstElement());
 				System.out.println("hallo2:" + zitateVector.firstElement().toString());
-				System.out.println("hallo3:" + zitateVector.firstElement()._zitatText.toString());
+				//System.out.println("hallo3:" + zitateVector.firstElement()._zitatText.toString());
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

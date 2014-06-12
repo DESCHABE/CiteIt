@@ -1,5 +1,6 @@
 package com.example.citeit;
 
+
 /**
  * Ein Objekt dieser Klasse beinhaltet ein Zitat.
  *
