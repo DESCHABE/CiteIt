@@ -7,5 +7,7 @@
     <string name="add">Hinzufügen</string>
     <string name="delete">Löschen</string>
     <string name="myCites">Meine Zitate</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="large_text">Large Text</string>
 
 </resources>
