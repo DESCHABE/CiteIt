@@ -160,7 +160,7 @@ public class FreebaseSearchForZitat {
 		url.put("limit", 10);
 
 		// Noch den API-Key hinzuf�gen
-		url.put(Utils.API_KEY_PARAMETER_NAME, Utils.holeApiKey());
+		//url.put(Utils.API_KEY_PARAMETER_NAME, Utils.holeApiKey());
 		
 		return url;
 	}
