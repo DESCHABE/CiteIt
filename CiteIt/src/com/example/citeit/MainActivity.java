@@ -6,7 +6,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -43,15 +42,14 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-
+				ZitatTopicWrapper item = ((ListViewAdapter) parent.getAdapter()).getItem(position);
+				dataHelper.delete(item);
+				onResume();
+				
 			}
 		});
 
 		dataHelper = new DataHelper(this);
-
-		Log.d("Insert: ", "Inserting ..");
-		dataHelper.save(new ZitatTopicWrapper(null, "Banane", "Affe", "url"));
-		dataHelper.save(new ZitatTopicWrapper(null, "Alea iacata est", "Julius Cäsar", "url"));
 
 	}
 

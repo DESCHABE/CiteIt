@@ -151,7 +151,7 @@ public class FreebaseSearchForZitat {
 		url.put("filter", "(any type:" + IFreebaseKonstanten.TYPE_ID_QUOTATION + ")");
 
 		//output=(/media_common/quotation/author)
-		url.put("output", "(" + IFreebaseKonstanten.PROPERTY_ID_AUTHOR_OF_QUOTATION + ")");
+		url.put("output", "(" + IFreebaseKonstanten.PROPERTY_ID_AUTHOR_OF_QUOTATION + " " + IFreebaseKonstanten.PROPERTY_ID_IMAGE + ")");
 		
 		// Damit JSON-Output gut lesbar ist
 		url.put("indent", "true"); // h�ngt "&indent=true" an URL an 

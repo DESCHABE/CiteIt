@@ -1,8 +1,7 @@
 package com.example.citeit;
 
 import java.util.ArrayList;
-import java.util.HashMap;
- 
+
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,26 +16,24 @@ public class ListViewAdapter extends BaseAdapter {
     private Activity activity;
     private ArrayList<ZitatTopicWrapper> data;
     private static LayoutInflater inflater=null;
-//    public ImageLoader imageLoader;
+    public ImageLoader imageLoader;
  
     public ListViewAdapter(Activity a, ArrayList<ZitatTopicWrapper> d) {
         activity = a;
         data=d;
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        imageLoader=new ImageLoader(activity.getApplicationContext());
+        imageLoader = new ImageLoader(activity.getApplicationContext());
     }
  
     public int getCount() {
         return data.size();
     }
- 
-    public Object getItem(int position) {
-        return position;
+    
+    @Override
+    public ZitatTopicWrapper getItem(int position) {
+        return data.get(position);
     }
- 
-    public long getItemId(int position) {
-        return position;
-    }
+
  
     public View getView(int position, View convertView, ViewGroup parent) {
         View vi=convertView;
@@ -48,11 +45,18 @@ public class ListViewAdapter extends BaseAdapter {
         ImageView thumb_image = (ImageView) vi.findViewById(R.id.icon); // thumb image
         
         ZitatTopicWrapper citationItem = data.get(position);
+        int loader = R.drawable.no_image;
  
         // Setting all values in listview
         txtCitation.setText(citationItem.get_zitatText());
         txtAuthor.setText(citationItem.get_zitatAutor());
-//        imageLoader.DisplayImage(citation.get(CustomizedListView.KEY_THUMB_URL), thumb_image);
+        imageLoader.DisplayImage(citationItem.get_imageUrl(), loader, thumb_image);
         return vi;
     }
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
