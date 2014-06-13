@@ -6,6 +6,7 @@ import com.example.citeit.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,8 +28,6 @@ public class SearchActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_search);
 		
 		_editText1 = (TextView) findViewById (R.id.editText1);
-		_editText2 = (TextView) findViewById (R.id.editText2);
-		_TextView1 = (TextView) findViewById (R.id.textView1);
 		_button1 = (Button) findViewById (R.id.button1);
 		_button1.setOnClickListener (this);
 	}
@@ -60,36 +59,22 @@ public class SearchActivity extends Activity implements OnClickListener{
 				Vector<ZitatTopicWrapper> zitateVector = null;
 				//zitateVector = FreebaseSearchForZitat.sucheZitat(_editText1.getText().toString());
 				zitateVector = FreebaseSearchForZitat.sucheZitat("art");
+				System.out.println("sucheZitatfunktioniert");
+				
+			
 				
 				//hier die Liste f�llen
 				/*
 				for (ZitatTopicWrapper zitat : zitateVector) {
 					System.out.println( zitat.toString() + "\n" );
-					
 				}
 				*/
-				_editText2.setText("hallo",TextView.BufferType.EDITABLE);
-				
-				 try {
-				        Thread.sleep(10000);
-				    } catch (InterruptedException e) {
-				        // TODO Auto-generated catch block
-				        e.printStackTrace();
-				    }
-
-				System.out.println("hallo1:" + zitateVector.firstElement());
-				System.out.println("hallo2:" + zitateVector.firstElement().toString());
-				//System.out.println("hallo3:" + zitateVector.firstElement()._zitatText.toString());
+				_editText2.setText(zitateVector.firstElement().toString());
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				System.out.println("Error");
 			}	
-			
-			Toast toast = 
-					Toast.makeText(this, "#yolom��ig swaggt hier der Text rein", Toast.LENGTH_LONG);
-			toast.show();
 		}
 		
 	}
