@@ -9,10 +9,13 @@ public class ZitatTopicWrapper {
 
 	/** Machine-Identifier dieses Topics/Zitats */
 	protected String _mid = "";
-	
+
+
 	/** Eigentlicher Text des Zitats */
 	protected String _zitatText = "";
-	
+	protected String _zitatAutor = "";
+	protected String _imageUrl = "";
+
 	/** Optionaler Autor des Zitats als Personen-Objekt. */
 	protected PersonTopicWrapper _autorDesZitats = null;
 	
@@ -35,6 +38,34 @@ public class ZitatTopicWrapper {
 		_mid = mid;
 	}
 	
+	public ZitatTopicWrapper(String mid, String citation, String author, String imageURL) {
+		_mid = mid;
+		_zitatText = citation;
+		_zitatAutor = author;
+		_imageUrl = imageURL;
+	}
+	
+	public String get_mid() {
+		return _mid;
+	}
+	
+
+	public String get_imageUrl() {
+		return _imageUrl;
+	}
+
+	public void set_imageUrl(String _imageUrl) {
+		this._imageUrl = _imageUrl;
+	}
+	
+	
+	public String get_zitatAutor() {
+		return _zitatAutor;
+	}
+
+	public void set_zitatAutor(String _zitatAutor) {
+		this._zitatAutor = _zitatAutor;
+	}
 	
 	/**
 	 * Getter-Methode zum Setzen des Zitats.
@@ -56,6 +87,22 @@ public class ZitatTopicWrapper {
 	}
 	
 	
+	public String get_zitatText() {
+		return _zitatText;
+	}
+
+	public void set_zitatText(String _zitatText) {
+		this._zitatText = _zitatText;
+	}
+
+	public PersonTopicWrapper get_autorDesZitats() {
+		return _autorDesZitats;
+	}
+
+	public void set_autorDesZitats(PersonTopicWrapper _autorDesZitats) {
+		this._autorDesZitats = _autorDesZitats;
+	}
+
 	/**
 	 * Setter-Methode f�r Anzahl der Treffer bei Suche nach
 	 * Zitaten (auch wenn diese nicht alle angezeigt werden).
