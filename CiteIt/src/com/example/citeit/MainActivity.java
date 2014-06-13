@@ -1,9 +1,10 @@
 package com.example.citeit;
 
 import java.util.ArrayList;
-
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.Menu;
@@ -15,6 +16,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.support.v7.app.ActionBarActivity;
 
+@TargetApi(Build.VERSION_CODES.GINGERBREAD)
+@SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity {
 
 	static final String KEY_THUMB_URL = "thumb_url";
@@ -24,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
 	ListView list;
 	ListViewAdapter adapter;
 
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@SuppressLint("NewApi")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,7 @@ public class MainActivity extends ActionBarActivity {
 
 		list = (ListView) findViewById(R.id.lstMyCites);
 		list.setOnItemClickListener(new OnItemClickListener() {
+			@SuppressLint("NewApi")
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
